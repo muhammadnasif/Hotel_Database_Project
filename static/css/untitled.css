@@ -1,0 +1,16 @@
+#customer-form {
+  padding-top: 67px;
+  max-width: 950px;
+}
+
+.col-5.input-field {
+  padding-right: 0px;
+  padding-left: 21px;
+  padding-top: 0px;
+  padding-bottom: 17px;
+}
+
+.sidebar-dark .nav-item .nav-link.active, .sidebar-dark .nav-item .nav-link.active i, .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover, .sidebar-dark .nav-item .nav-link:hover i {
+  margin-right: 10px;
+}
+

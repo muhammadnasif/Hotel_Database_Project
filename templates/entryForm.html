@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block entryFormBlock %}
+    <div class="container content-centering">
+        <form class="shadow justify-content-center justify-content-xl-end" id="customer-form" method="POST" action=".">
+            <h1 class="text-center heading" style="padding-bottom: 22px;">Customer Entry</h1>
+            <div class="form-row d-flex flex-row justify-content-center"
+                 style="margin-bottom: 20px;">
+                {% csrf_token %}
+                <div class="col-5 input-field"><label for="name-input">Name:</label>
+                    <input class="form-control"
+                           type="text"
+                           id="name-input"
+                           placeholder="Here..."
+                           name="name"
+                           value="{{ customer.name }}"
+                    >
+                </div>
+                <div class="col-5 input-field"><label for="name-input">Company Name:</label>
+                    <input class="form-control"
+                           type="text"
+                           id="name-input"
+                           placeholder="Here..."
+                           name="company_name"
+                           value="{{ customer.company }}"
+                    >
+                </div>
+            </div>
+            <div class="form-row d-flex flex-row justify-content-center" style="margin-bottom: 20px;">
+                <div class="col-5 input-field"><label for="name-input">Phone:</label>
+                    <input class="form-control"
+                           type="text"
+                           id="name-input"
+                           placeholder="Here..."
+                           name="phone"
+                           value="{{ customer.phone }}"
+                           required
+                    >
+                </div>
+                <div class="col-5 input-field"><label for="name-input">Address:</label>
+                    <input class="form-control"
+                           type="text"
+                           id="name-input"
+                           placeholder="Here..."
+                           name="address"
+                           value="{{ customer.address }}"
+                    ></div>
+            </div>
+            <div class="form-row d-flex flex-row justify-content-center" style="margin-bottom: 20px;">
+                <div class="col-5 input-field"><label for="name-input">NID/Passport:</label>
+                    <input
+                            class="form-control"
+                            type="text"
+                            id="name-input"
+                            placeholder="Here..."
+                            name="nid"
+                            value="{{ customer.nid }}"
+                    ></div>
+                <div class="col-5 input-field"><label for="name-input">Check-In:</label>
+                    <input class="form-control"
+                           type="date"
+                           name="date"></div>
+            </div>
+            <div class="form-row d-flex flex-row justify-content-center" style="margin-bottom: 20px;">
+                <div class="col text-center button-center-column">
+                    <button class="btn btn-primary" type="submit" name="customer_search"
+                            style="background-color: rgb(41,109,0);margin-bottom: 35px;">Search
+                    </button>
+
+                    {% if save == False %}
+                        <button class="btn btn-primary" type="submit" name="customer_submit" disabled
+                                style="background-color: rgb(41,109,0);margin-bottom: 35px;">Save
+                        </button>
+                    {% else %}
+                        <button class="btn btn-primary" type="submit" name="customer_submit"
+                                style="background-color: rgb(41,109,0);margin-bottom: 35px;">Save
+                        </button>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
